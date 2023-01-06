@@ -7,10 +7,8 @@
 <script setup></script>
 
 <style scoped>
-/* Footer */
 .footer {
 	padding: 20px;
 	text-align: center;
-	margin-top: 20px;
 }
 </style>

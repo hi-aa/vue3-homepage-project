@@ -8,3 +8,15 @@ body {
   margin: 0;
   padding: 0;
 }
+* {
+  box-sizing: border-box;
+}
+
+/* 
+color 참고
+#BD2A2E
+#3B3936
+#B2BEBF
+#889C9B
+#486966 
+*/

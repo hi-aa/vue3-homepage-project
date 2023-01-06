@@ -1,26 +1,33 @@
 <template>
 	<div class="header">
-		<div id="myTopnav" class="topnav">
-			<!-- <h2>Title Nav</h2> -->
-			<a href="/" class="active">Home</a>
-			<a href="#news">News</a>
-			<a href="#contact">Contact</a>
-			<a href="#about">About</a>
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-				<font-awesome-icon icon="fa fa-bars" />
-				아이콘
-				<!-- <i class="fa fa-bars"></i> -->
+		<div id="myTopnav" class="topnav" :class="{ responsive: showMenu }">
+			<router-link :to="{ name: 'home' }" active-class="active">
+				Home
+			</router-link>
+			<router-link :to="{ name: 'news' }" active-class="active">
+				News
+			</router-link>
+			<!-- <a href="#contact">Contact</a> -->
+			<!-- <a href="#about">About</a> -->
+
+			<a href="javascript:void(0);" class="icon" @click="showMenu = !showMenu">
+				<font-awesome-icon icon="fa-solid fa-bars" />
 			</a>
 		</div>
 	</div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+/** 모바일 화면 메뉴버튼 클릭 */
+const showMenu = ref(false);
+</script>
 
 <style>
 .topnav {
 	overflow: hidden;
-	background-color: #333;
+	background-color: #3b3936;
 }
 
 .topnav a {
@@ -33,13 +40,13 @@
 	font-size: 17px;
 }
 
-.topnav a:hover {
-	background-color: #ddd;
-	color: black;
-}
+/* .topnav a:hover {
+	background-color: #b2bebf;
+	color: white;
+} */
 
 .topnav a.active {
-	background-color: #04aa6d;
+	background-color: #486966;
 	color: white;
 }
 
