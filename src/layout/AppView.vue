@@ -9,13 +9,7 @@
 <script setup></script>
 
 <style scoped>
-/* .row:after {
-	content: '';
-	display: table;
-	clear: both;
-} */
 .contents {
-	padding: 10px;
 	width: 100%;
 }
 </style>

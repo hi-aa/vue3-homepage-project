@@ -1,6 +1,8 @@
 <template>
 	<div class="footer">
-		<h2>Footer</h2>
+		Test Development Web Site (2023)
+		<br />
+		by Areum
 	</div>
 </template>
 
@@ -10,5 +12,8 @@
 .footer {
 	padding: 20px;
 	text-align: center;
+	background-color: #b2bebf;
+	color: #486966;
+	font-size: small;
 }
 </style>
