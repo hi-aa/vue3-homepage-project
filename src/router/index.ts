@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
-import NewsView from '@/views/NewsView.vue';
+import ItemView from '@/views/ItemView.vue';
 import NotFound from '@/components/NotFound.vue';
 
 const router = createRouter({
@@ -12,9 +12,9 @@ const router = createRouter({
 			component: HomeView,
 		},
 		{
-			path: '/news',
-			name: 'news',
-			component: NewsView,
+			path: '/item',
+			name: 'item',
+			component: ItemView,
 		},
 		{
 			path: '/:pathMatch(.*)*',

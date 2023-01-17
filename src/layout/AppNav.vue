@@ -4,8 +4,8 @@
 			<router-link :to="{ name: 'home' }" active-class="active">
 				Home
 			</router-link>
-			<router-link :to="{ name: 'news' }" active-class="active">
-				News
+			<router-link :to="{ name: 'item' }" active-class="active">
+				Item
 			</router-link>
 			<!-- <a href="#contact">Contact</a> -->
 			<!-- <a href="#about">About</a> -->

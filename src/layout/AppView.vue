@@ -1,15 +1,13 @@
 <template>
-	<div class="row">
-		<div class="contents">
-			<RouterView></RouterView>
-		</div>
-	</div>
+	<main>
+		<RouterView></RouterView>
+	</main>
 </template>
 
 <script setup></script>
 
 <style scoped>
-.contents {
+main {
 	width: 100%;
 }
 </style>
