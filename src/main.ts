@@ -10,6 +10,9 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 library.add(faBars);
 
 import '@/assets/main.css';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const app = createApp(App);
 

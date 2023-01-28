@@ -6,22 +6,34 @@
 			:key="index"
 			class="item-group"
 		>
-			<template v-for="item in question" :key="item">
-				<div
-					class="item"
-					:class="{ selected: answers[index] == item }"
-					@click="answers[index] = item"
-				>
-					{{ item }}
-				</div>
-			</template>
+			<swiper
+				:slides-per-view="5"
+				:space-between="50"
+				:modules="[Navigation, Pagination, Autoplay]"
+				:pagination="{ clickable: true }"
+				:autoplay="{ delay: 3000, disableOnInteraction: true }"
+				@swiper="onSwiper"
+				@click="onSlideClick"
+			>
+				<swiper-slide v-for="item in question" :key="item">
+					<span
+						class="item"
+						:class="{ selected: answers[index] == item }"
+						@click="answers[index] = item"
+					>
+						{{ item }}
+					</span>
+				</swiper-slide>
+			</swiper>
 		</div>
-
 		{{ answers }}
 	</div>
 </template>
 
 <script setup>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Pagination, Autoplay } from 'swiper';
+
 import { ref } from 'vue';
 
 const questions = [
@@ -32,6 +44,13 @@ const questions = [
 	{ question: [41, 42, 43, 44, 45, 46, 47, 48, 49, 50] },
 ];
 const answers = ref([-1, -1, -1, -1, -1]);
+
+const onSwiper = swiper => {
+	console.log(swiper);
+};
+const onSlideClick = swiper => {
+	swiper.autoplay.stop();
+};
 </script>
 
 <style scoped>
@@ -40,6 +59,9 @@ const answers = ref([-1, -1, -1, -1, -1]);
 }
 .item-group {
 	margin: 10px auto;
+}
+.swiper-slide {
+	height: 80px;
 }
 .item {
 	width: 70px;
